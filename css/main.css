@@ -1,3 +1,62 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  margin: 0;
+
+}
+
+/***************
+ * Header
+***************/
+
+
+
+section {
+  margin: 0 13% 0 13%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 10px 0;
+}
+
+header {
+  background: black;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/***************
+ * Body
+***************/
+
+
+
+p {
+  text-indent: 10px;
+  font-size: 24px;
+  display: inline-block;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+}
+
+li:not(:first-child) {
+  border-top: 1px solid gray;
+}
+
+.fa {
+  font-size: 24px;
 }
