@@ -2,10 +2,10 @@ var playOn = document.getElementsByClassName("fa")
 var headerText = document.getElementById("header-text")
 var song = document.getElementsByClassName("song")
 
-playOn[0].addEventListener("click", function() {
+var switchPlay = function() {
   for (var i = 0; i < playOn.length; i ++) {
     if (playOn[i].classList.contains("fa-stop")) {
-      if (playOn[0] === playOn[i]) {
+      if (this === playOn[i]) {
       } else {
         playOn[i].classList.toggle("fa-stop");
         song[i].pause();
@@ -13,7 +13,10 @@ playOn[0].addEventListener("click", function() {
       }
     }
   }
+}
 
+playOn[0].addEventListener("click", function() {
+  switchPlay();
   this.classList.toggle("fa-stop")
   if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Favorite Food";
@@ -28,17 +31,7 @@ playOn[0].addEventListener("click", function() {
 });
 
 playOn[1].addEventListener("click", function() {
-  for (var i = 0; i < playOn.length; i ++) {
-    if (playOn[i].classList.contains("fa-stop")) {
-      if (playOn[1] === playOn[i]) {
-      } else {
-        playOn[i].classList.toggle("fa-stop");
-        song[i].pause();
-        headerText.innerHTML = "Select a song!";
-      }
-    }
-  }
-
+  switchPlay();
   this.classList.toggle("fa-stop")
   if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Thrill of the Hunt";
@@ -53,17 +46,7 @@ playOn[1].addEventListener("click", function() {
 });
 
 playOn[2].addEventListener("click", function() {
-  for (var i = 0; i < playOn.length; i ++) {
-    if (playOn[i].classList.contains("fa-stop")) {
-      if (playOn[2] === playOn[i]) {
-      } else {
-        playOn[i].classList.toggle("fa-stop");
-        song[i].pause();
-        headerText.innerHTML = "Select a song!";
-      }
-    }
-  }
-
+  switchPlay();
   this.classList.toggle("fa-stop")
   if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Transgender Dysphoria";
@@ -78,16 +61,6 @@ playOn[2].addEventListener("click", function() {
 });
 
 playOn[3].addEventListener("click", function() {
-  for (var i = 0; i < playOn.length; i ++) {
-    if (playOn[i].classList.contains("fa-stop")) {
-      if (playOn[3] === playOn[i]) {
-      } else {
-        playOn[i].classList.toggle("fa-stop");
-        song[i].pause();
-        headerText.innerHTML = "Select a song!";
-      }
-    }
-  }
 
   this.classList.toggle("fa-stop")
   if (headerText.innerHTML === "Select a song!") {
@@ -102,3 +75,30 @@ playOn[3].addEventListener("click", function() {
   }
 });
 
+song[0].addEventListener("ended" , function() {
+  playOn[0].classList.toggle("fa-stop");
+  song[1].play();
+  playOn[1].classList.toggle("fa-stop");
+  headerText.innerHTML = "Now Playing: Thrill of the Hunt";
+});
+
+song[1].addEventListener("ended" , function() {
+  playOn[1].classList.toggle("fa-stop");
+  song[2].play();
+  playOn[2].classList.toggle("fa-stop");
+  headerText.innerHTML = "Now Playing: Transgender Dysphoria";
+});
+
+song[2].addEventListener("ended" , function() {
+  playOn[2].classList.toggle("fa-stop");
+  song[3].play();
+  playOn[3].classList.toggle("fa-stop");
+  headerText.innerHTML = "Now Playing: Where I'm From";
+});
+
+song[3].addEventListener("ended" , function() {
+  playOn[3].classList.toggle("fa-stop");
+  song[0].play();
+  playOn[0].classList.toggle("fa-stop");
+  headerText.innerHTML = "Now Playing: Favorite Food";
+});
