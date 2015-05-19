@@ -21,12 +21,14 @@ h1 {
   text-align: center;
   color: white;
   margin: 10px 0;
+  font-weight: 500;
 }
 
 header {
   background: black;
   margin: 0;
   padding: 10px 0;
+  border-radius: 5px;
 }
 
 /***************

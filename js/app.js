@@ -9,16 +9,16 @@ playOn[0].addEventListener("click", function() {
       } else {
         playOn[i].classList.toggle("fa-stop");
         song[i].pause();
-        headerText.innerHTML = "Select a Song!";
+        headerText.innerHTML = "Select a song!";
       }
     }
   }
 
   this.classList.toggle("fa-stop")
-  if (headerText.innerHTML === "Select a Song!") {
+  if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Favorite Food";
   } else {
-    headerText.innerHTML = "Select a Song!"
+    headerText.innerHTML = "Select a song!"
   }
   if (song[0].paused) {
     song[0].play();
@@ -34,16 +34,16 @@ playOn[1].addEventListener("click", function() {
       } else {
         playOn[i].classList.toggle("fa-stop");
         song[i].pause();
-        headerText.innerHTML = "Select a Song!";
+        headerText.innerHTML = "Select a song!";
       }
     }
   }
 
   this.classList.toggle("fa-stop")
-  if (headerText.innerHTML === "Select a Song!") {
+  if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Thrill of the Hunt";
   } else {
-    headerText.innerHTML = "Select a Song!"
+    headerText.innerHTML = "Select a song!"
   }
   if (song[1].paused) {
     song[1].play();
@@ -59,16 +59,16 @@ playOn[2].addEventListener("click", function() {
       } else {
         playOn[i].classList.toggle("fa-stop");
         song[i].pause();
-        headerText.innerHTML = "Select a Song!";
+        headerText.innerHTML = "Select a song!";
       }
     }
   }
 
   this.classList.toggle("fa-stop")
-  if (headerText.innerHTML === "Select a Song!") {
+  if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Transgender Dysphoria";
   } else {
-    headerText.innerHTML = "Select a Song!"
+    headerText.innerHTML = "Select a song!"
   }
   if (song[2].paused) {
     song[2].play();
@@ -84,16 +84,16 @@ playOn[3].addEventListener("click", function() {
       } else {
         playOn[i].classList.toggle("fa-stop");
         song[i].pause();
-        headerText.innerHTML = "Select a Song!";
+        headerText.innerHTML = "Select a song!";
       }
     }
   }
 
   this.classList.toggle("fa-stop")
-  if (headerText.innerHTML === "Select a Song!") {
+  if (headerText.innerHTML === "Select a song!") {
     headerText.innerHTML = "Now Playing: Where I'm From" ;
   } else {
-    headerText.innerHTML = "Select a Song!"
+    headerText.innerHTML = "Select a song!"
   }
   if (song[3].paused) {
     song[3].play();
